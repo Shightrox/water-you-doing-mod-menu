@@ -1,0 +1,20 @@
+{
+  "gameVersion": "1.0.6",
+  "platform": "Windows x64",
+  "executable": "WYDRO-Win64-Shipping.exe",
+  "sha256": "c570accd9c9e9466f43a597940daf06242249d5f2bfb6d686a761ee5353b1d18",
+  "sizeOfImage": 152158208,
+  "moduleRvas": {
+    "nameBlockPointers": "0x863d7d0",
+    "chunkedObjectArray": "0x870b860",
+    "processInternalHook": "0x14cec00",
+    "hudHook": "0x3a6f04b"
+  },
+  "processEventVtableSlot": 76,
+  "objectArray": {
+    "entriesPerChunk": 65536,
+    "entryStride": 24,
+    "objectPointerOffset": 8
+  },
+  "referenceOnly": true
+}

@@ -1,0 +1,41 @@
+cmake_minimum_required(VERSION 3.20)
+project(WaterYouModding LANGUAGES C CXX ASM_MASM RC)
+if(NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
+  message(FATAL_ERROR "Use MSVC with the x64 target")
+endif()
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5 CACHE STRING "Compatibility for pinned dependency projects")
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+set(QJS_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+add_subdirectory("${CMAKE_BINARY_DIR}/vendor/quickjs" "${CMAKE_BINARY_DIR}/vendor-build/quickjs" EXCLUDE_FROM_ALL)
+add_subdirectory("${CMAKE_BINARY_DIR}/vendor/minhook" "${CMAKE_BINARY_DIR}/vendor-build/minhook" EXCLUDE_FROM_ALL)
+
+add_executable(WydLauncher src/native/injector.cpp)
+target_compile_options(WydLauncher PRIVATE /utf-8 /W3 /EHsc)
+target_link_libraries(WydLauncher PRIVATE user32)
+
+add_library(WydNative SHARED src/native/native_host.cpp src/native/native_bridge.cpp
+  src/native/hud_hook.asm "${CMAKE_BINARY_DIR}/generated/mod.rc")
+target_compile_options(WydNative PRIVATE
+  $<$<COMPILE_LANGUAGE:CXX>:/utf-8> $<$<COMPILE_LANGUAGE:CXX>:/EHsc> $<$<COMPILE_LANGUAGE:CXX>:/W3>)
+target_compile_definitions(WydNative PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX)
+target_link_libraries(WydNative PRIVATE qjs minhook user32 advapi32 shell32 psapi)
+
+add_executable(BridgeTests tests/bridge_tests.cpp src/native/native_bridge.cpp)
+target_include_directories(BridgeTests PRIVATE src/native)
+target_compile_options(BridgeTests PRIVATE /utf-8 /W3 /EHsc)
+target_link_libraries(BridgeTests PRIVATE qjs user32)
+target_link_options(BridgeTests PRIVATE /STACK:8388608)
+add_executable(InputGateTests tests/input_event_gate_tests.cpp)
+target_include_directories(InputGateTests PRIVATE src/native)
+target_compile_options(InputGateTests PRIVATE /utf-8 /W3 /EHsc)
+add_executable(CallbackLifetimeTests "${CMAKE_BINARY_DIR}/generated/callback_lifetime_tests.cpp")
+target_compile_options(CallbackLifetimeTests PRIVATE /utf-8 /W3 /EHsc)
+
+enable_testing()
+add_test(NAME bridge COMMAND BridgeTests "${CMAKE_SOURCE_DIR}/src/native/shim.js"
+  "${CMAKE_BINARY_DIR}/generated/mod.js" "${CMAKE_SOURCE_DIR}/tests/bridge-edge-tests.js")
+add_test(NAME input-gate COMMAND InputGateTests)
+add_test(NAME callback-lifetime COMMAND CallbackLifetimeTests)

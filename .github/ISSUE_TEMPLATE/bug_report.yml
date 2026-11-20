@@ -1,0 +1,31 @@
+name: Bug report
+description: Something stopped working or does not behave as expected.
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Game and mod versions
+      placeholder: Game 1.0.6, mod v1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: How are you playing?
+      options:
+        - Hosting the game
+        - Joined a friend's game
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the feature, what you did, and what you expected. Screenshots or a short clip help.
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message, if any
+      description: The launcher message or the relevant lines from native-runtime/mod-log.jsonl.

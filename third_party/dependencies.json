@@ -1,0 +1,12 @@
+[
+  {
+    "name": "quickjs",
+    "url": "https://codeload.github.com/quickjs-ng/quickjs/zip/refs/tags/v0.11.0",
+    "sha256": "424e50a6513b0ea9fe72ecbba3cb31e524f78d3a4ce7f8ed894aec4a446ca3b4"
+  },
+  {
+    "name": "minhook",
+    "url": "https://codeload.github.com/TsudaKageyu/minhook/zip/refs/tags/v1.3.4",
+    "sha256": "172708123daa0c98d20d3a980b16a50be14af243dc95dee6f79c24193ad010e4"
+  }
+]

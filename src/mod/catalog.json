@@ -1,0 +1,390 @@
+{
+  "categories": [
+    {
+      "id": "tools",
+      "label": "Инструменты",
+      "labelEn": "Tools"
+    },
+    {
+      "id": "supplies",
+      "label": "Материалы и топливо",
+      "labelEn": "Supplies & fuel"
+    },
+    {
+      "id": "food",
+      "label": "Еда и напитки",
+      "labelEn": "Food & drinks"
+    },
+    {
+      "id": "mushrooms",
+      "label": "Грибы",
+      "labelEn": "Mushrooms"
+    },
+    {
+      "id": "fishing",
+      "label": "Рыбалка и наживка",
+      "labelEn": "Fishing & bait"
+    },
+    {
+      "id": "fish",
+      "label": "Рыба",
+      "labelEn": "Fish"
+    },
+    {
+      "id": "modules",
+      "label": "Модули лодки",
+      "labelEn": "Boat modules"
+    },
+    {
+      "id": "money",
+      "label": "Деньги",
+      "labelEn": "Money"
+    }
+  ],
+  "entries": [
+    {
+      "id": "Bucket",
+      "label": "Ведро",
+      "category": "tools",
+      "labelEn": "Bucket"
+    },
+    {
+      "id": "hammer",
+      "label": "Молоток",
+      "category": "tools",
+      "labelEn": "Hammer"
+    },
+    {
+      "id": "scrubber",
+      "label": "Щётка",
+      "category": "tools",
+      "labelEn": "Scrubber"
+    },
+    {
+      "id": "spray",
+      "label": "Спрей от насекомых",
+      "category": "tools",
+      "labelEn": "Bug spray"
+    },
+    {
+      "id": "Flashlight",
+      "label": "Фонарик",
+      "category": "tools",
+      "labelEn": "Flashlight"
+    },
+    {
+      "id": "MineDefuser",
+      "label": "Обезвреживатель мин",
+      "category": "tools",
+      "labelEn": "Mine defuser"
+    },
+    {
+      "id": "Lighter",
+      "label": "Зажигалка",
+      "category": "tools",
+      "labelEn": "Lighter"
+    },
+    {
+      "id": "Extinguisher",
+      "label": "Огнетушитель",
+      "category": "tools",
+      "labelEn": "Fire extinguisher"
+    },
+    {
+      "id": "Metal",
+      "label": "Металлолом",
+      "category": "supplies",
+      "labelEn": "Scrap metal"
+    },
+    {
+      "id": "Wood",
+      "label": "Древесина",
+      "category": "supplies",
+      "labelEn": "Wood"
+    },
+    {
+      "id": "DuctTape",
+      "label": "Клейкая лента",
+      "category": "supplies",
+      "labelEn": "Duct tape"
+    },
+    {
+      "id": "Gasoline",
+      "label": "Бензин",
+      "category": "supplies",
+      "labelEn": "Gasoline"
+    },
+    {
+      "id": "Oil",
+      "label": "Масло",
+      "category": "supplies",
+      "labelEn": "Oil"
+    },
+    {
+      "id": "BeerCan",
+      "label": "Банка пива",
+      "category": "food",
+      "labelEn": "Beer can"
+    },
+    {
+      "id": "Sandwich",
+      "label": "Сэндвич",
+      "category": "food",
+      "labelEn": "Sandwich"
+    },
+    {
+      "id": "Chocolate",
+      "label": "Шоколад",
+      "category": "food",
+      "labelEn": "Chocolate"
+    },
+    {
+      "id": "cannedMeat",
+      "label": "Мясные консервы",
+      "category": "food",
+      "labelEn": "Canned meat"
+    },
+    {
+      "id": "Antidote",
+      "label": "Противоядие",
+      "category": "food",
+      "labelEn": "Antidote"
+    },
+    {
+      "id": "Grib_Normal",
+      "label": "Обычный гриб",
+      "category": "mushrooms",
+      "labelEn": "Common mushroom"
+    },
+    {
+      "id": "Grib_Blue",
+      "label": "Синий гриб",
+      "category": "mushrooms",
+      "labelEn": "Blue mushroom"
+    },
+    {
+      "id": "Grib_Purple",
+      "label": "Фиолетовый гриб",
+      "category": "mushrooms",
+      "labelEn": "Purple mushroom"
+    },
+    {
+      "id": "Grib_Rainbow",
+      "label": "Радужный гриб",
+      "category": "mushrooms",
+      "labelEn": "Rainbow mushroom"
+    },
+    {
+      "id": "Grib_Red",
+      "label": "Красный гриб",
+      "category": "mushrooms",
+      "labelEn": "Red mushroom"
+    },
+    {
+      "id": "Grib_Black",
+      "label": "Чёрный гриб",
+      "category": "mushrooms",
+      "labelEn": "Black mushroom"
+    },
+    {
+      "id": "Grib_Fire",
+      "label": "Огненный гриб",
+      "category": "mushrooms",
+      "labelEn": "Fire mushroom"
+    },
+    {
+      "id": "Grib_White",
+      "label": "Белый гриб",
+      "category": "mushrooms",
+      "labelEn": "White mushroom"
+    },
+    {
+      "id": "Grib_Toxic",
+      "label": "Ядовитый гриб",
+      "category": "mushrooms",
+      "labelEn": "Toxic mushroom"
+    },
+    {
+      "id": "FishingRod",
+      "label": "Удочка",
+      "category": "fishing",
+      "labelEn": "Fishing rod"
+    },
+    {
+      "id": "Bait_Corn",
+      "label": "Кукуруза для наживки",
+      "category": "fishing",
+      "labelEn": "Corn bait"
+    },
+    {
+      "id": "Bait_GoldenCorn",
+      "label": "Золотая кукуруза",
+      "category": "fishing",
+      "labelEn": "Golden corn"
+    },
+    {
+      "id": "Bait_Worms",
+      "label": "Черви для наживки",
+      "category": "fishing",
+      "labelEn": "Worm bait"
+    },
+    {
+      "id": "FISH_Carp",
+      "label": "Карп",
+      "category": "fish",
+      "labelEn": "Carp"
+    },
+    {
+      "id": "FISH_Catfish",
+      "label": "Сом",
+      "category": "fish",
+      "labelEn": "Catfish"
+    },
+    {
+      "id": "FISH_Crucian",
+      "label": "Карась",
+      "category": "fish",
+      "labelEn": "Crucian carp"
+    },
+    {
+      "id": "FISH_Goldfish",
+      "label": "Золотая рыбка",
+      "category": "fish",
+      "labelEn": "Goldfish"
+    },
+    {
+      "id": "FISH_Perch",
+      "label": "Окунь",
+      "category": "fish",
+      "labelEn": "Perch"
+    },
+    {
+      "id": "FISH_Pike",
+      "label": "Щука",
+      "category": "fish",
+      "labelEn": "Pike"
+    },
+    {
+      "id": "FISH_DeepCaveFish",
+      "label": "Пещерная рыба",
+      "category": "fish",
+      "labelEn": "Deep cave fish"
+    },
+    {
+      "id": "FISH_SulfurFish",
+      "label": "Серная рыба",
+      "category": "fish",
+      "labelEn": "Sulfur fish"
+    },
+    {
+      "id": "FISH_ElectricEel",
+      "label": "Электрический угорь",
+      "category": "fish",
+      "labelEn": "Electric eel"
+    },
+    {
+      "id": "HarpoonBoatModule",
+      "label": "Модуль гарпуна",
+      "category": "modules",
+      "labelEn": "Harpoon module"
+    },
+    {
+      "id": "SonarModuleItem",
+      "label": "Ремкомплект сонара",
+      "category": "modules",
+      "labelEn": "Sonar repair kit"
+    },
+    {
+      "id": "TurbineFix",
+      "label": "Ремкомплект турбины",
+      "category": "modules",
+      "labelEn": "Turbine repair kit"
+    },
+    {
+      "id": "SteerFix",
+      "label": "Ремкомплект руля",
+      "category": "modules",
+      "labelEn": "Steering repair kit"
+    },
+    {
+      "id": "ExtinguisherFabricatorFix",
+      "label": "Ремкомплект станции огнетушителей",
+      "category": "modules",
+      "labelEn": "Extinguisher station repair kit"
+    },
+    {
+      "id": "OverloadModuleFix",
+      "label": "Ремкомплект форсажа",
+      "category": "modules",
+      "labelEn": "Boost repair kit"
+    },
+    {
+      "id": "Wallet",
+      "label": "Кошелёк",
+      "category": "money",
+      "labelEn": "Wallet"
+    },
+    {
+      "id": "Cash",
+      "label": "Наличные",
+      "category": "money",
+      "labelEn": "Cash"
+    }
+  ],
+  "fish": [
+    {
+      "id": "FISH_Carp",
+      "label": "Карп",
+      "category": "fish",
+      "labelEn": "Carp"
+    },
+    {
+      "id": "FISH_Catfish",
+      "label": "Сом",
+      "category": "fish",
+      "labelEn": "Catfish"
+    },
+    {
+      "id": "FISH_Crucian",
+      "label": "Карась",
+      "category": "fish",
+      "labelEn": "Crucian carp"
+    },
+    {
+      "id": "FISH_Goldfish",
+      "label": "Золотая рыбка",
+      "category": "fish",
+      "labelEn": "Goldfish"
+    },
+    {
+      "id": "FISH_Perch",
+      "label": "Окунь",
+      "category": "fish",
+      "labelEn": "Perch"
+    },
+    {
+      "id": "FISH_Pike",
+      "label": "Щука",
+      "category": "fish",
+      "labelEn": "Pike"
+    },
+    {
+      "id": "FISH_DeepCaveFish",
+      "label": "Пещерная рыба",
+      "category": "fish",
+      "labelEn": "Deep cave fish"
+    },
+    {
+      "id": "FISH_SulfurFish",
+      "label": "Серная рыба",
+      "category": "fish",
+      "labelEn": "Sulfur fish"
+    },
+    {
+      "id": "FISH_ElectricEel",
+      "label": "Электрический угорь",
+      "category": "fish",
+      "labelEn": "Electric eel"
+    }
+  ]
+}
