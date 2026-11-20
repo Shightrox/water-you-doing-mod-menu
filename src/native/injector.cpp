@@ -18,7 +18,7 @@ static void remote_call(HANDLE process,uintptr_t address,void* argument){HANDLE 
 int wmain(int argc,wchar_t** argv){SetConsoleOutputCP(CP_UTF8);try{
  const fs::path dll=fs::path(self_dir())/L"WydNative.dll";
  if(!fs::is_regular_file(dll))throw std::runtime_error("WydNative.dll is missing");
- if(argc>1&&!wcscmp(argv[1],L"--check")){auto mod=LoadLibraryExW(dll.c_str(),nullptr,DONT_RESOLVE_DLL_REFERENCES);if(!mod)throw std::runtime_error("Invalid native DLL");bool ok=GetProcAddress(mod,"WydStart")!=nullptr;FreeLibrary(mod);if(!ok)throw std::runtime_error("Native entry point is missing");std::cout<<"PACKAGE CHECK PASSED: native DLL, no Python or Frida dependency.\n";return 0;}
+ if(argc>1&&!wcscmp(argv[1],L"--check")){auto mod=LoadLibraryExW(dll.c_str(),nullptr,DONT_RESOLVE_DLL_REFERENCES);if(!mod)throw std::runtime_error("Invalid native DLL");bool ok=GetProcAddress(mod,"WydStart")!=nullptr;FreeLibrary(mod);if(!ok)throw std::runtime_error("Native entry point is missing");std::cout<<"PACKAGE CHECK PASSED.\n";return 0;}
  auto list=games();if(list.empty()){std::cout<<"Start Water You Doing and enter a game. Waiting up to two minutes...\n";for(int i=0;i<120&&list.empty();i++){Sleep(1000);list=games();}}
  if(list.empty())throw std::runtime_error("Game not found. Start the game, then run this BAT again");if(list.size()!=1)throw std::runtime_error("Close duplicate game instances first");DWORD pid=list[0];
  HANDLE process=OpenProcess(PROCESS_CREATE_THREAD|PROCESS_QUERY_INFORMATION|PROCESS_VM_OPERATION|PROCESS_VM_WRITE|PROCESS_VM_READ|SYNCHRONIZE,FALSE,pid);if(!process)throw std::runtime_error("Cannot open game, Windows error "+std::to_string(GetLastError()));

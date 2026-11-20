@@ -2,7 +2,7 @@
 
 ## Build
 
-On Windows, install Visual Studio 2022 or Build Tools 2022 with **Desktop development with C++**, including the Windows SDK and MASM. Put CMake 3.20+, Python 3.10+ and Node.js 22+ on PATH. These are build tools only; players just need the BAT.
+On Windows, install Visual Studio 2022 or Build Tools 2022 with **Desktop development with C++**, including the Windows SDK and MASM. Put CMake 3.20+, Python 3.10+ and Node.js 22+ on PATH.
 
 From the repository root:
 
@@ -43,8 +43,6 @@ python scripts/package.py
 | `src/native/injector.cpp` | Running-game discovery and DLL loading |
 | `scripts/build_bundle.py` | Catalog + settings + UI + core → embedded resource |
 | `scripts/package.py`, `packaging/` | Self-extracting BAT and its end-user text |
-
-The public sources are the native version. Names such as `NativeFunction` and `Memory.alloc` refer to the local shim; no Frida runtime is linked or downloaded.
 
 ## Runtime
 

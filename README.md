@@ -27,8 +27,6 @@ Windows x64 · tested game build **1.0.6** · English by default, Russian availa
 3. Double-click the BAT and wait for **Ready**.
 4. Press **F8**. The menu supports the mouse, checkboxes, search, scrolling and sliders.
 
-That's the whole installation. The BAT includes everything it needs; Python, Frida and a separate mod loader are not required.
-
 Run the BAT again after restarting the game. To update an already running mod, press **F10** first, then launch the new BAT. Language and settings are saved between launches.
 
 ## Controls
